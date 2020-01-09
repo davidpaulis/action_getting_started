@@ -1,0 +1,9 @@
+workflow "git message quality action" {
+  resolves = ["post git quality control"]
+  on = "push"
+}
+
+action "post git quality control" {
+  uses = "davidpaulis/action_getting_started@master"
+  secrets = ["GITHUB_TOKEN"]
+}
